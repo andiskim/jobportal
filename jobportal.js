@@ -1,8 +1,6 @@
 Jobs = new Mongo.Collection('jobs');
 
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
 
   Template.hello.helpers({
     counter: function () {
@@ -16,6 +14,13 @@ if (Meteor.isClient) {
       Session.set('counter', Session.get('counter') + 1);
     }
   });
+
+  Template.slider.rendered = function() {
+    $(document).ready(function () {
+    // Plugin initialization
+    $('.slider').slider();
+})
+  };
 }
 
 if (Meteor.isServer) {
