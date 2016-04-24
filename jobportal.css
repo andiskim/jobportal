@@ -1,0 +1,65 @@
+/*INITIALIZATION*/
+* {
+outline: 1px solid red !important;
+}
+
+*{
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+/*LAYOUT CSS*/
+.container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.row {
+  width: 100%;
+  display: inline-flex;
+}
+.col-1 {
+  width: 8.3333333333%;
+}
+.col-2 {
+  width: 16.66666667%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.3333333%;
+}
+.col-5 {
+  width: 41.666667%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.3333333%;
+}
+.col-8 {
+  width: 66.6666667%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.333333%;
+}
+.col-11 {
+  width: 91.666666%;
+}
+.col-12 {
+  width: 100%;
+}
+
+/*SEARCH*/
+.search {
+  background-image: url("http://placehold.it/1200x300");
+  height: 300px;
+}
