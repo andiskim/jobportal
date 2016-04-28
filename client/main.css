@@ -1,7 +1,7 @@
 /*INITIALIZATION*/
-* {
+/** {
 outline: 1px solid red !important;
-}
+}*/
 
 *{
 -webkit-box-sizing: border-box;
@@ -59,4 +59,27 @@ nav .brand-logo {
 .search {
   background-image: url("http://placehold.it/1200x400");
   height: 400px;
+}
+
+#user-left-pane {
+  padding: 0px;
+  /*background-color: green;*/
+  min-height: 300px;
+}
+
+#user-right-pane {
+  /*background-color: blue;*/
+  min-height: 300px;
+  padding: 30px;
+}
+
+.profile-box {
+  background: white;
+  padding: 10px;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
 }
