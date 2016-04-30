@@ -2,12 +2,19 @@
 Template.register.events({
   'submit form': function(event) {
     event.preventDefault();
+    var username = $('[name=username]').val();
     var email = $('[name=email]').val();
     var password = $('[name=password]').val();
     Accounts.createUser({
+      username: username,
       email: email,
       password: password
-    }, function(error) {
+      // profile: {
+      //   firstName: firstName;
+      //   lastName: lastName;
+      // }
+    }
+    , function(error) {
       if(error) {
         console.log(error.reason)
       } else {
@@ -24,7 +31,8 @@ Template.login.events({
     event.preventDefault();
     var email = $('[name=email]').val();
     var password = $('[name=password]').val();
-    Meteor.loginWithPassword(email, password, function(error) {
+    Meteor.loginWithPassword(email, password,
+      function(error) {
       if(error) {
         console.log(error.reason);
       } else {
@@ -35,5 +43,17 @@ Template.login.events({
         }
       }
     });
+  }
+});
+
+Template.navbar.events({
+  'click .logout': function() {
+    Meteor.logout();
+  }
+});
+
+Template.UserLayout.helpers({
+  'run': function() {
+    // console.log(Meteor.user().username);
   }
 });
